@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chemical Information Search</h1>
+        <form method="POST" class="search-form">
+            <label for="chemical_name">Enter Chemical Name:</label>
+            <input type="text" id="chemical_name" name="chemical_name" required>
+            <button type="submit" name="search">Search</button>
+        </form>
+        <br>
+        <form method="POST" class="search-form">
+            <button type="submit" name="show_all">Show All Chemical Names</button>
+        </form>
+    </div>
+</body>
+</html>

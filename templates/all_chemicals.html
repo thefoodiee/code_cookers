@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chemical Names</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>All Chemical Names</h1>
+        <div class="chemical-list-container">
+            <div class="chemical-list-column">
+                <ul class="chemical-list">
+                    {% set mid = chemicals|length // 2 %}
+                    {% for chemical in chemicals[:mid] %}
+                        <li><a href="{{ url_for('chemical_details', name=chemical) }}">{{ chemical }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="chemical-list-column">
+                <ul class="chemical-list">
+                    {% for chemical in chemicals[mid:] %}
+                        <li><a href="{{ url_for('chemical_details', name=chemical) }}">{{ chemical }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <a href="/" class="back-link">Back to Search</a>
+    </div>
+</body>
+</html>
