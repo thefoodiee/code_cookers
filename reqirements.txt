@@ -48,6 +48,7 @@ fqdn==1.5.1
 frozenlist==1.4.1
 fuse-python==1.0.7
 fuzzywuzzy==0.18.0
+groq==0.11.0
 h11==0.14.0
 html2text==2024.2.26
 httpcore==1.0.5
@@ -162,6 +163,7 @@ PyYAML==6.0.1
 pyzmq==26.2.0
 qrcode==7.4.2
 referencing==0.35.1
+replicate==0.32.1
 repolib==2.2.1
 requests==2.31.0
 requests-file==1.5.1
